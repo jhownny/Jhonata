@@ -87,19 +87,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Banco.cs" />
-    <Compile Include="Cadastro de Cursos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Cadastro de Cursos.Designer.cs">
-      <DependentUpon>Cadastro de Cursos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Curso.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Cadastro de Cursos.resx">
-      <DependentUpon>Cadastro de Cursos.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
