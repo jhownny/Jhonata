@@ -59,7 +59,9 @@ namespace Jhonata
         public void InserirCurso()
         {
             var cmd = Banco.Abrir();
-
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.CommandType = "SP_NovoCurso";
+            cmd.Parameters.AddWithValue("",)
 
 
 

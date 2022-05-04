@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jhonata", "Jhonata\Jhonata.csproj", "{C498D262-84BE-4828-BE56-33D007B66173}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormCadastroCurso", "FormCadastroCurso\FormCadastroCurso.csproj", "{778E2DF3-DCC4-428E-9868-3B0E8C5D376B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jhonata", "FormCadastroCurso\Jhonata.csproj", "{778E2DF3-DCC4-428E-9868-3B0E8C5D376B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,10 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C498D262-84BE-4828-BE56-33D007B66173}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C498D262-84BE-4828-BE56-33D007B66173}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C498D262-84BE-4828-BE56-33D007B66173}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C498D262-84BE-4828-BE56-33D007B66173}.Release|Any CPU.Build.0 = Release|Any CPU
 		{778E2DF3-DCC4-428E-9868-3B0E8C5D376B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{778E2DF3-DCC4-428E-9868-3B0E8C5D376B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{778E2DF3-DCC4-428E-9868-3B0E8C5D376B}.Release|Any CPU.ActiveCfg = Release|Any CPU
