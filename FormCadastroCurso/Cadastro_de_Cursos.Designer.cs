@@ -207,7 +207,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(537, 469);
+            this.ClientSize = new System.Drawing.Size(558, 464);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtBuscarCursoPorDescricao);
             this.Controls.Add(this.dgvCursos);
@@ -228,6 +228,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Cadastro_de_Cursos";
             this.Text = "Cadastro de Cursos";
+            this.Load += new System.EventHandler(this.Cadastro_de_Cursos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

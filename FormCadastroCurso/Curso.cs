@@ -14,7 +14,7 @@ namespace Jhonata
         public int id;
         public string nome;
         public string categoria;
-        public int cargaHoraria;
+        public string cargaHoraria;
         public string valor;
         public bool ativo;
         public DateTime dataCadastro;
@@ -25,7 +25,7 @@ namespace Jhonata
         public int Id{ get { return id;  } set { id = value; } }
         public string Nome { get { return nome; } set { nome = value; } }
         public string Categoria { get { return categoria; }set { categoria = value; } }
-        public int CargaHoraria {get { return cargaHoraria; }set{ cargaHoraria = value; } }
+        public string CargaHoraria {get { return cargaHoraria; }set{ cargaHoraria = value; } }
         public string Valor { get { return valor; } set { valor = value; } }
         public bool Ativo { get { return ativo; }set { ativo = value; } }
         public DateTime DataCadastro { get { return dataCadastro; }set{ dataCadastro = value; } }
@@ -37,7 +37,7 @@ namespace Jhonata
         {
         }
 
-        public Curso(string nome, string categoria, int cargaHoraria, string valor)
+        public Curso(string nome, string categoria, string cargaHoraria, string valor)
         {
             Nome = nome;
             Categoria = categoria;
@@ -45,7 +45,7 @@ namespace Jhonata
             Valor = valor;
         }
 
-        public Curso(int id, string nome, string categoria, int cargaHoraria, string valor, bool ativo, DateTime dataCadastro)
+        public Curso(int id, string nome, string categoria, string cargaHoraria, string valor, bool ativo, DateTime dataCadastro)
         {
             Id = id;
             Nome = nome;
@@ -71,7 +71,7 @@ namespace Jhonata
 
         } 
 
-        public bool Alterar(int _id,string _nome,string _categoria,int _cargaHoraria ,string _valor)
+        public bool Alterar(int _id,string _nome,string _categoria,string _cargaHoraria ,string _valor)
         {
             bool resultado = false;
             try
