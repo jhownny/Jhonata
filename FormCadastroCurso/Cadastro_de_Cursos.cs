@@ -7,28 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 using Jhonata;
 
 namespace Jhonata
 {
     public partial class Cadastro_de_Cursos : Form
     {
-        public Cadastro_de_Cursos()
-        {
-            InitializeComponent();
-        }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label4_Click(object sender, EventArgs e)
+        private void btnInserirCurso_Click(object sender, EventArgs e)
         {
+            Curso k = new Curso(txtNomeCurso.Text,txtCategoriaCurso.Text,txtCargaHorariaCurso.Text,txtValorCurso.Text);
+
+
+
 
         }
 
-        private void Cadastro_de_Cursos_Load(object sender, EventArgs e)
+        private void txtNomeCurso_TextChanged(object sender, EventArgs e)
         {
 
         }

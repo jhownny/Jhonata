@@ -92,6 +92,7 @@
             this.txtNomeCurso.Name = "txtNomeCurso";
             this.txtNomeCurso.Size = new System.Drawing.Size(142, 20);
             this.txtNomeCurso.TabIndex = 5;
+            this.txtNomeCurso.TextChanged += new System.EventHandler(this.txtNomeCurso_TextChanged);
             // 
             // btnInserirCurso
             // 
@@ -101,6 +102,7 @@
             this.btnInserirCurso.TabIndex = 6;
             this.btnInserirCurso.Text = "&Inserir";
             this.btnInserirCurso.UseVisualStyleBackColor = true;
+            this.btnInserirCurso.Click += new System.EventHandler(this.btnInserirCurso_Click);
             // 
             // btnAlterarCurso
             // 
@@ -119,7 +121,6 @@
             this.btnConsultarPorId.TabIndex = 8;
             this.btnConsultarPorId.Text = "&Consultar";
             this.btnConsultarPorId.UseVisualStyleBackColor = true;
-            this.btnConsultarPorId.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnExcluirCurso
             // 
@@ -165,7 +166,6 @@
             this.label4.Size = new System.Drawing.Size(72, 13);
             this.label4.TabIndex = 13;
             this.label4.Text = "Carga Horaria";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -228,7 +228,6 @@
             this.Controls.Add(this.label1);
             this.Name = "Cadastro_de_Cursos";
             this.Text = "Cadastro de Cursos";
-            this.Load += new System.EventHandler(this.Cadastro_de_Cursos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCursos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
