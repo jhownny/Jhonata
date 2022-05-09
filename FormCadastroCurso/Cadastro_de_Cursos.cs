@@ -58,6 +58,67 @@ namespace Jhonata
 
         }
 
+        private void btnListarCurso_Click(object sender, EventArgs e)
+        {
+            dgvCursos.Rows.Clear();
+            List<Curso> ListaDeCursos = Curso.Listar();
+            int count = ListaDeCursos.Count;
+            foreach (Curso curso in ListaDeCursos)
+            {
+                dgvCursos.Rows.Add();
+                dgvCursos.Rows[dgvCursos.CurrentRow.Index].Cells[0].Value = curso.Id.ToString();
+                dgvCursos.Rows[dgvCursos.CurrentRow.Index].Cells[1].Value = curso.Nome.ToString();
+                dgvCursos.Rows[dgvCursos.CurrentRow.Index].Cells[2].Value = curso.Categoria.ToString();
+                dgvCursos.Rows[dgvCursos.CurrentRow.Index].Cells[3].Value = curso.CargaHoraria.ToString();
+                dgvCursos.Rows[dgvCursos.CurrentRow.Index].Cells[4].Value = curso.Valor.ToString();
+
+            }
+     
+        
+        }
+
+        private void btnConsultarPorId_Click(object sender, EventArgs e)
+        {
+            if(btnConsultarPorId.Text == "Consultar")
+            {
+                txtCodigoCurso.ReadOnly = false;
+                txtCodigoCurso.Focus();
+                btnConsultarPorId.Text = "Buscar";
+
+
+            }
+            else
+            {
+                Curso curso = Curso.ConsultarPorId(int.Parse(txtCodigoCurso.Text));
+                if(curso.Id > 0)
+                {
+                    txtNomeCurso.Text = curso.Nome.ToString();
+                    txtCategoriaCurso.Text = curso.Categoria.ToString();
+                    txtCargaHorariaCurso.Text = curso.CargaHoraria.ToString();
+                    txtValorCurso.Text = curso.Valor.ToString();
+
+                    btnConsultarPorId.Text = "Consultar";
+                    txtCodigoCurso.ReadOnly = true;
+                    btnAlterarCurso.Enabled = true;
+                    txtNomeCurso.ReadOnly = true;
+
+                }
+                else
+                {
+
+                    MessageBox.Show("Este Curso Não Existe.");
+
+                }
+
+
+            }
+
+
+
+        }
+                
+
+
 
     }
 }

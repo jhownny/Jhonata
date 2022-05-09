@@ -16,7 +16,6 @@ namespace Jhonata
         public string categoria;
         public string cargaHoraria;
         public string valor;
-        public bool ativo;
         public DateTime dataCadastro;
 
 
@@ -27,7 +26,6 @@ namespace Jhonata
         public string Categoria { get { return categoria; }set { categoria = value; } }
         public string CargaHoraria {get { return cargaHoraria; }set{ cargaHoraria = value; } }
         public string Valor { get { return valor; } set { valor = value; } }
-        public bool Ativo { get { return ativo; }set { ativo = value; } }
         public DateTime DataCadastro { get { return dataCadastro; }set{ dataCadastro = value; } }
 
 
@@ -45,14 +43,13 @@ namespace Jhonata
             Valor = valor;
         }
 
-        public Curso(int id, string nome, string categoria, string cargaHoraria, string valor, bool ativo, DateTime dataCadastro)
+        public Curso(int id, string nome, string categoria, string cargaHoraria, string valor, DateTime dataCadastro)
         {
             Id = id;
             Nome = nome;
             Categoria = categoria;
             CargaHoraria = cargaHoraria;
             Valor = valor;
-            Ativo = ativo;
             DataCadastro = dataCadastro;
         }
 
@@ -104,9 +101,49 @@ namespace Jhonata
             return resultado;
 
 
+            public static List<Curso> Listar()
+            {
+                List<Curso> cursos = new List<Curso>();
+                var cmd = Banco.Abrir();
+
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from cursos where ativo = 1 order by nome";
+                var dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    cursos.Add(new Curso(
+                        dr.GetInt32(0),
+                        dr.GetString(1),
+                        dr.GetString(2),
+                        dr.GetString(3),
+                        dr.GetString(4),
+                        dr.GetDateTime(5)
+                        ));
+                }
+
+                return cursos;
+
+            }
+
+            public static Curso ConsultarPorId(int _id);
+            {
+                Curso curso = new Curso();
+                var cmd = Banco.Abrir();
+
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from cursos where IdCurso = " + _id;
+                MySqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
 
 
 
+                }
+
+
+
+
+            }
 
 
 

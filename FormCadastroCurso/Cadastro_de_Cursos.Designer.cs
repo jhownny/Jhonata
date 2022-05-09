@@ -121,6 +121,7 @@
             this.btnConsultarPorId.TabIndex = 8;
             this.btnConsultarPorId.Text = "&Consultar";
             this.btnConsultarPorId.UseVisualStyleBackColor = true;
+            this.btnConsultarPorId.Click += new System.EventHandler(this.btnConsultarPorId_Click);
             // 
             // btnExcluirCurso
             // 
@@ -133,12 +134,13 @@
             // 
             // btnListarCurso
             // 
-            this.btnListarCurso.Location = new System.Drawing.Point(228, 179);
+            this.btnListarCurso.Location = new System.Drawing.Point(233, 179);
             this.btnListarCurso.Name = "btnListarCurso";
             this.btnListarCurso.Size = new System.Drawing.Size(75, 23);
             this.btnListarCurso.TabIndex = 10;
             this.btnListarCurso.Text = "&Listar";
             this.btnListarCurso.UseVisualStyleBackColor = true;
+            this.btnListarCurso.Click += new System.EventHandler(this.btnListarCurso_Click);
             // 
             // label2
             // 
